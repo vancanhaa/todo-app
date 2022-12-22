@@ -1,6 +1,6 @@
 import "./style.scss";
 import TodoItem from "../../components/todo-item/TodoItem";
-import { MODE, STATUS } from "../../constants";
+import { MODE, POSITION_KEYWORD, STATUS } from "../../constants";
 import { useEffect, useState } from "react";
 import AddNewForm from "../../shared/add-newform/AddNewForm";
 import { localStorageUlti } from "../../functions/localStorage";
@@ -9,19 +9,26 @@ const {get, set} = localStorageUlti('todoItems', [])
 
 export default function Body({ mode, handleChangeRenderMode }) {
     const [todoItems, setTodoItems] = useState([]);
+    const [filterText, setFilterText] = useState('')
 
     useEffect(() => {
         setTodoItems(get())
-    }, [])
+    }, []);
+    useEffect(() => {
+        const keyword = window.location.search.slice(POSITION_KEYWORD)
+        setFilterText(keyword)
+    }, []);
 
-    const renderTodoItem = () => {
-        return (todoItems.map((item, index) => <TodoItem key={index} {...item}/>))
+    const renderTodoItems = () => {
+        return (todoItems
+            .filter((item) => item.title.includes(filterText))
+            .map((item, index) => <TodoItem key={index} {...item}/>))
     }
 
     const chooseMode = () => {
         switch (mode) {
             case MODE.SHOW_LIST:
-                return renderTodoItem();
+                return renderTodoItems();
             case MODE.ADD_NEW:
                 return (
                     <AddNewForm 
@@ -41,7 +48,7 @@ export default function Body({ mode, handleChangeRenderMode }) {
                     />
                 )
             default:
-                return renderTodoItem();
+                return renderTodoItems();
         }
     }
 
