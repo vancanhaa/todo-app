@@ -35,8 +35,8 @@ export default function AddNewForm({ handleSubmit, formClass }) {
       placeholder: 'Name of Creator',
       name: 'creator',
       value: creator,
-      regExPattern: /^.{6,12}$/,
-      messageError: 'Please type Name if Creator, it has length from 6 to 12'
+      regExPattern: /^.{2,12}$/,
+      messageError: 'Please type Name if Creator, it has length from 2 to 12'
     },
     {
       label: 'Description',
