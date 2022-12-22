@@ -4,6 +4,11 @@ export const STATUS = {
     DONE: 'Done'
 }
 
+export const MODE = {
+    SHOW_LIST: 'showList',
+    ADD_NEW: 'addNew'
+}
+
 const {NEW, DOING, DONE} = STATUS
 
 const descriptionData = 'This is a task, This is a task, This is a task, This is a task, This is a task,'
