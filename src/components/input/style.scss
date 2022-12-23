@@ -1,61 +1,63 @@
 .inputText {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 
-    label {
-        font-weight: bold;
-        font-size: 14px;
-        margin-right: 5px;
-    }
+  label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+  }
 
-    input {
-        width: 300px;
-        border: none;
-        border-bottom: 1px solid #000;
-        font-size: 14px;
-        padding-left: 10px;
-    }
+  input {
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 14px;
+    padding-left: 10px;
+  }
 
-    input::placeholder {
-        color: #bbb
-    }
+  input::placeholder {
+    color: #bbb;
+  }
 
-    input:focus-visible {
-        outline: none;
-        border-bottom: 2px solid #000;
-    }
+  input:focus-visible {
+    outline: none;
+    border-bottom: 2px solid #000;
+  }
 
-    p {
-        position: absolute;
-        bottom: -18px;
-        left: 115px;
-        white-space: nowrap;
-        color: #f90c0c;
-    }
+  p {
+    position: absolute;
+    bottom: -18px;
+    left: 115px;
+    white-space: nowrap;
+    color: #f90c0c;
+  }
 }
 
 .inputText--error {
-    input, input:focus-visible {
-        border-color: #f90c0c;
-    }
+  input,
+  input:focus-visible {
+    border-color: #f90c0c;
+  }
 }
 
 .inputText--valid {
-    label {
-        color: #04be00;
-    }
-    input, input:focus-visible {
-        border-color: #04be00;
-    }
+  label {
+    color: #04be00;
+  }
+  input,
+  input:focus-visible {
+    border-color: #04be00;
+  }
 }
 
 .formClass > div.inputText {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .inputText--error + .inputText {
-    margin-top: 20px;
+  margin-top: 20px;
 }

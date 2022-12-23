@@ -1,21 +1,20 @@
 .sidebar {
-    position: absolute;
-    width: 150px;
-    height: calc(100vh - 100px);
-    background-color: #f88f14;
+  position: absolute;
+  width: 150px;
+  height: calc(100vh - 100px);
+  background-color: #f88f14;
 
-    .sidebar__item {
-        height: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px solid white;
+  .sidebar__item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
 
-        p {
-            font-size: 24px;
-            color: white;
-        }
+    p {
+      font-size: 24px;
+      color: white;
     }
-
+  }
 }

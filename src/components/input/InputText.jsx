@@ -1,19 +1,19 @@
-import "./style.scss"
+import "./style.scss";
 
 export default function InputText({
-  inputClass = '',
+  inputClass = "",
   label,
   placeholder,
   name,
   value,
   onChange,
-  error = ''
+  error = "",
 }) {
   const checkInputClass = () => {
-    if (!value)  return  ''
-    if (value && error) return 'inputText--error'
-    if (value && !error) return 'inputText-valid'
-  }
+    if (!value) return "";
+    if (value && error) return "inputText--error";
+    if (value && !error) return "inputText-valid";
+  };
 
   return (
     <div className={`inputText ${inputClass} ${checkInputClass()}`}>
