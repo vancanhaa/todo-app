@@ -11,3 +11,35 @@ export const MODE = {
 };
 
 export const POSITION_KEYWORD = 9;
+
+export const ROUTER = {
+  ALL: "/",
+  NEW: "/new",
+  DOING: "/doing",
+  DONE: "/done",
+  ADD_NEW: "/add-new",
+  DETAIL_TASK: "/detail/:idTask",
+  DETAIL: "/detail",
+  NOT_FOUND: "*",
+};
+
+export const SIDEBAR_ITEM = [
+  {
+    url: "/",
+    title: "All Task",
+  },
+  {
+    url: "/new",
+    title: "New Task",
+  },
+  {
+    url: "/doing",
+    title: "Doing Task",
+  },
+  {
+    url: "/done",
+    title: "Done Task",
+  },
+];
+
+export const LIST_TO_DO_KEY = "l_t_d_k";
