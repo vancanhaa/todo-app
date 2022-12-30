@@ -30,6 +30,7 @@
   .todo-item__line-break {
     height: 2px;
     background-color: var(--primary);
+    border-color: transparent;
   }
 
   div.todo-item__description {
@@ -48,5 +49,5 @@
 }
 
 .todo-item:hover {
-  border: 3px solid var(--primary);
+  opacity: 0.7;
 }

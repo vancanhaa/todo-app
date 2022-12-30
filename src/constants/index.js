@@ -43,3 +43,5 @@ export const SIDEBAR_ITEM = [
 ];
 
 export const LIST_TO_DO_KEY = "l_t_d_k";
+
+export const ITEM_PER_PAGE = 4;
